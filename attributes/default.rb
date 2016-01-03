@@ -18,3 +18,16 @@ default["phing"]["preferred_state"] = "stable"
 default['phing']['install_dir'] = '/usr/local/phing'
 default['phing']['prefix'] = '/usr/bin'
 default['phing']['version'] = 'latest'
+default['phing']['install_suggested'] = true
+default['phing']['suggested_packages'] = {
+    'phpdocumentor/phpdocumentor' => '*',
+    'phpmd/phpmd' => '*',
+    'pdepend/pdepend' => '*',
+    'phploc/phploc' => '*',
+    'phpunit/phpunit' => '*',
+    'phpunit/php-code-coverage' => '*',
+    'pear/versioncontrol_svn' => '*',
+    'pear/versioncontrol_git' => '@dev',
+    'pear/archive_tar' => '*',
+    'tedivm/jshrink' => '*'
+}

@@ -24,7 +24,8 @@ template "#{phing_dir}/composer.json" do
   mode 0600
   variables(
     :version => version,
-    :bindir => node['phing']['prefix']
+    :bindir => node['phing']['prefix'],
+    :suggested => node['phing']['suggested_packages']
   )
 end
 

@@ -2,7 +2,18 @@
     "name": "phing",
     "description": "phing",
     "require": {
+<% if node['phing']['install_suggested'] -%>
+        "phing/phing": "<%= @version %>",
+    <% @suggested.each do |package, version| -%>
+        <% if @suggested.keys.last == package -%>
+        "<%= package %>": "<%= version %>"
+        <% else -%>
+        "<%= package %>": "<%= version %>",
+        <% end -%>
+    <% end -%>
+<% else -%>
         "phing/phing": "<%= @version %>"
+<% end -%>
     },
     "config": {
         "bin-dir": "<%= @bindir %>"
